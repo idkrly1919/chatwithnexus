@@ -4,16 +4,16 @@
 
 @layer base {
   body {
-    @apply bg-paper text-stone-700 antialiased;
+    @apply bg-[#121212] text-zinc-300 antialiased overflow-hidden;
     font-family: 'Inter', sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-stone-900;
-  }
 
-  /* Scrollbar Styling */
+  h1, h2, h3, .brand-font, .font-brand {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
   ::-webkit-scrollbar { @apply w-[6px]; }
   ::-webkit-scrollbar-track { @apply bg-transparent; }
-  ::-webkit-scrollbar-thumb { @apply bg-stone-300 rounded-sm; }
-  ::-webkit-scrollbar-thumb:hover { @apply bg-stone-400; }
+  ::-webkit-scrollbar-thumb { @apply bg-zinc-700 rounded; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-zinc-600; }
 }

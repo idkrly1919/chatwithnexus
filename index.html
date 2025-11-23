@@ -1,77 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nexus | Advanced Reasoning Engine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #121212;
-            overflow: hidden;
-            color: #e0e0e0;
-        }
-
-        h1, h2, h3, .brand-font, .font-brand {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        
-        .glass-panel {
-            background: rgba(28, 28, 28, 0.5);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .gradient-text {
-            background: linear-gradient(to right, #fff, #a1a1aa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .glow-bg {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(29, 78, 216, 0.1) 0%, rgba(0, 0, 0, 0) 60%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-            transition: all 1s ease-out;
-        }
-
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        ::-webkit-scrollbar { @apply w-[6px]; }
-        ::-webkit-scrollbar-track { @apply bg-transparent; }
-        ::-webkit-scrollbar-thumb { @apply bg-zinc-700 rounded; }
-        ::-webkit-scrollbar-thumb:hover { @apply bg-zinc-600; }
-
-    </style>
-<script type="importmap">
+  <script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
     "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
-    "vite": "https://aistudiocdn.com/vite@^7.2.4",
-    "three": "https://aistudiocdn.com/three@^0.181.2",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
+    "three": "https://aistudiocdn.com/three@^0.181.2",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
   }
 }
 </script>
 </head>
-<body class="text-zinc-200 min-h-screen relative selection:bg-blue-500 selection:text-white bg-[#121212]">
+  <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
-</body>
+  </body>
 </html>
