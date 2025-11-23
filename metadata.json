@@ -1,6 +1,6 @@
 {
-  "name": "Nexus Reasoning Engine",
-  "description": "High-performance computational companion with multimodal reasoning.",
+  "name": "Nexus | Advanced Reasoning Engine",
+  "description": "A web-based AI interface for mathematical reasoning, logical deduction, and multimodal synthesis.",
   "requestFramePermissions": [
     "microphone"
   ]

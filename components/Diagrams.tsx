@@ -205,10 +205,10 @@ export const PerformanceMetricDiagram: React.FC = () => {
     }
 
     return (
-        <div className="flex flex-col md:flex-row gap-8 items-center p-8 bg-stone-900 text-stone-100 rounded-xl my-8 border border-stone-800 shadow-lg">
+        <div className="flex flex-col md:flex-row gap-8 items-center p-8 bg-white text-stone-800 rounded-xl my-8 border border-stone-200 shadow-sm">
             <div className="flex-1 min-w-[240px]">
                 <h3 className="font-serif text-xl mb-2 text-nobel-gold">Performance vs Standard</h3>
-                <p className="text-stone-400 text-sm mb-4 leading-relaxed">
+                <p className="text-stone-500 text-sm mb-4 leading-relaxed">
                     AlphaQubit consistently achieves lower logical error rates (LER) than the standard Minimum-Weight Perfect Matching (MWPM) decoder.
                 </p>
                 <div className="flex gap-2 mt-6">
@@ -216,33 +216,33 @@ export const PerformanceMetricDiagram: React.FC = () => {
                         <button 
                             key={d}
                             onClick={() => setDistance(d as any)} 
-                            className={`px-3 py-1.5 rounded text-sm font-medium transition-all duration-200 border ${distance === d ? 'bg-nobel-gold text-stone-900 border-nobel-gold' : 'bg-transparent text-stone-400 border-stone-700 hover:border-stone-500 hover:text-stone-200'}`}
+                            className={`px-3 py-1.5 rounded text-sm font-medium transition-all duration-200 border ${distance === d ? 'bg-nobel-gold text-stone-900 border-nobel-gold' : 'bg-transparent text-stone-500 border-stone-300 hover:border-stone-500 hover:text-stone-800'}`}
                         >
                             Distance {d}
                         </button>
                     ))}
                 </div>
-                <div className="mt-6 font-mono text-xs text-stone-500 flex items-center gap-2">
+                <div className="mt-6 font-mono text-xs text-stone-400 flex items-center gap-2">
                     <BarChart2 size={14} className="text-nobel-gold" /> 
                     <span>LOGICAL ERROR RATE (LOWER IS BETTER)</span>
                 </div>
             </div>
             
-            <div className="relative w-64 h-72 bg-stone-800/50 rounded-xl border border-stone-700/50 p-6 flex justify-around items-end">
+            <div className="relative w-64 h-72 bg-stone-50 rounded-xl border border-stone-200 p-6 flex justify-around items-end">
                 {/* Background Grid Lines */}
-                <div className="absolute inset-0 p-6 flex flex-col justify-between pointer-events-none opacity-10">
-                   <div className="w-full h-[1px] bg-stone-400"></div>
-                   <div className="w-full h-[1px] bg-stone-400"></div>
-                   <div className="w-full h-[1px] bg-stone-400"></div>
-                   <div className="w-full h-[1px] bg-stone-400"></div>
+                <div className="absolute inset-0 p-6 flex flex-col justify-between pointer-events-none opacity-20">
+                   <div className="w-full h-[1px] bg-stone-300"></div>
+                   <div className="w-full h-[1px] bg-stone-300"></div>
+                   <div className="w-full h-[1px] bg-stone-300"></div>
+                   <div className="w-full h-[1px] bg-stone-300"></div>
                 </div>
 
                 {/* MWPM Bar */}
                 <div className="w-20 flex flex-col justify-end items-center h-full z-10">
                     <div className="flex-1 w-full flex items-end justify-center relative mb-3">
-                        <div className="absolute -top-5 w-full text-center text-sm font-mono text-stone-400 font-bold bg-stone-900/90 py-1 px-2 rounded backdrop-blur-sm border border-stone-700/50 shadow-sm">{formatValue(currentData.mwpm)}</div>
+                        <div className="absolute -top-5 w-full text-center text-sm font-mono text-stone-500 font-bold bg-white/90 py-1 px-2 rounded backdrop-blur-sm border border-stone-200/50 shadow-sm">{formatValue(currentData.mwpm)}</div>
                         <motion.div 
-                            className="w-full bg-stone-600 rounded-t-md border-t border-x border-stone-500/30"
+                            className="w-full bg-stone-200 rounded-t-md border-t border-x border-stone-300/30"
                             initial={{ height: 0 }}
                             animate={{ height: `${(currentData.mwpm / maxVal) * 100}%` }}
                             transition={{ type: "spring", stiffness: 80, damping: 15 }}
@@ -254,7 +254,7 @@ export const PerformanceMetricDiagram: React.FC = () => {
                 {/* AlphaQubit Bar */}
                 <div className="w-20 flex flex-col justify-end items-center h-full z-10">
                      <div className="flex-1 w-full flex items-end justify-center relative mb-3">
-                        <div className="absolute -top-5 w-full text-center text-sm font-mono text-nobel-gold font-bold bg-stone-900/90 py-1 px-2 rounded backdrop-blur-sm border border-nobel-gold/30 shadow-sm">{formatValue(currentData.alpha)}</div>
+                        <div className="absolute -top-5 w-full text-center text-sm font-mono text-nobel-gold font-bold bg-white/90 py-1 px-2 rounded backdrop-blur-sm border border-nobel-gold/10 shadow-sm">{formatValue(currentData.alpha)}</div>
                         <motion.div 
                             className="w-full bg-nobel-gold rounded-t-md shadow-[0_0_20px_rgba(197,160,89,0.25)] relative overflow-hidden"
                             initial={{ height: 0 }}
