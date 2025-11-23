@@ -1,0 +1,7 @@
+{
+  "name": "Nexus Reasoning Engine",
+  "description": "High-performance computational companion with multimodal reasoning.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

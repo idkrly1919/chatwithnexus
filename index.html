@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Reasoning Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'monospace'],
+              sans: ['"Inter"', 'sans-serif'],
+            },
+            colors: {
+              nexus: {
+                bg: '#09090b', // zinc-950
+                card: '#18181b', // zinc-900
+                accent: '#06b6d4', // cyan-500
+                success: '#22c55e',
+                border: '#27272a',
+              }
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #09090b;
+        color: #e4e4e7;
+        overflow-x: hidden;
+      }
+      
+      /* --- Utility Classes --- */
+      
+      .glass-panel {
+        background: rgba(24, 24, 27, 0.9);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      
+      .gradient-text {
+        color: white;
+      }
+
+      /* Scrollbar Styling */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #52525b; }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+    "three": "https://aistudiocdn.com/three@^0.181.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
